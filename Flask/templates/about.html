@@ -1,12 +1,106 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>About Page</title>
-
-</head>
-
+<html lang="en">
+<title>About</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee,.fa-map-o,.fa-fire,.fa-pie-chart,.fa-hourglass-half {font-size:200px}
+</style>
 <body>
 
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="home" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
+    <a href="about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">About</a>
+    <a href="design-team" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Design Team</a>
+    <a href="visuals" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Visuals</a>
+    
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Design Team</a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a> -->
+    <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a> -->
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-orange w3-center" style="padding:128px 16px;background-image: url('/static/firebanner.png');background-repeat: no-repeat; background-size: 1300px 550px">
+  <h1 class="w3-margin w3-jumbo w3-padding-64"><strong>Meet the Algorithm</strong></h1>
+  <p class="w3-xlarge"></p>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-48 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>The Dataset</h1>
+      <h5 class="w3-padding-32">The dataset that was used to create our model can be found by following <a href="https://www.kaggle.com/elikplim/forest-fires-data-set?fbclid=IwAR0qUfj9UXoE4r3lpqx-Y955isASfZ-nH_CbmWkKNTEwnIDGlFPhAHSR5Fk">this link</a></h5>
+
+      <!-- <p class="w3-text-grey"></p> -->
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-pie-chart w3-padding-64 w3-text-orange"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-hourglass-half w3-padding-64 w3-text-orange w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>The Importance</h1>
+      <h5 class="w3-padding-32">Being able to predict bush fires before they happen in places that are likely to be deistated by forest fires is essential. Recently places such as Australia have been heavily affected and using our software hardware combo can help in taking proactive measures to prevent fires.</h5>
+
+      <!-- <p class="w3-text-grey"></p> -->
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Prevent Fires Before They Happen.</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>HackFires</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 
 </body>
 </html>
