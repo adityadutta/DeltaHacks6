@@ -30,5 +30,5 @@ void loop()
   //get soil moisture value from the function below and print it
   Serial.println(analogRead(pinSoilSensor));
 
-  delay(1000);
+  delay(10000);
 }

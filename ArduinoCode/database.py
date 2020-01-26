@@ -18,7 +18,7 @@ class Value:
         self.date_added = datetime.datetime.now()
 
 
-class dataBaseManager:
+class DatabaseManager:
 
     def __init__(self, db_name):
         self.ref = db.collection(u'test')
@@ -32,8 +32,8 @@ class dataBaseManager:
 
         return new_data
 
-
-object1 = Value(33, 22)
-dbm = dataBaseManager("test")
-dbm.add_to_db(object1)
+# #DEBUG
+# object1 = Value(33, 22)
+# dbm = dataBaseManager("test")
+# dbm.add_to_db(object1)
 

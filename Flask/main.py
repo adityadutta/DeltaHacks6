@@ -16,7 +16,7 @@ def design_team():
     return render_template("design-team.html")
 
 @app.route("/visuals")
-def visulas():
+def visuals():
     return render_template("visuals.html")
 
 if __name__ == "__main__": #This allows you to run flask in debug mode through cmd by typing
